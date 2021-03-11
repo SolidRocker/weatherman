@@ -1,0 +1,59 @@
+.scroll-box, .scroll-box-active {
+    height: 25vh;
+    width: 23vw;
+    max-width: 300px;
+    align-items: center;
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--subBG);
+}
+  
+.scroll-box-active {
+    background-color: var(--subActive);
+}
+  
+.scroll-box:hover {
+    background-color: var(--subHover);
+}
+
+.menu-wrapper .menu-wrapper--inner .menu-item-wrapper:focus{
+    outline: none;
+
+}
+  
+.scroll-arrow, .scroll-arrow-hidden {
+    width: 0; 
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 20px solid var(--lightColor);
+}
+  
+.scroll-arrow-hidden {
+    opacity: 0;
+}
+  
+.scroll-date {
+    text-align: center;
+    padding-top: 0vh;
+    color: var(--mainWhite);
+}
+  
+.scroll-icon {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    pointer-events: none;
+}
+  
+.scroll-temp-day {
+    text-align: center;
+    color: var(--mainWhite);
+}
+  
+.scroll-temp-night {
+    text-align: center;
+    color: var(--lightGrey);
+    padding-bottom: 2vh;
+}

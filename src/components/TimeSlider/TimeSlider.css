@@ -1,0 +1,23 @@
+.time-slider {
+    margin-bottom: 5vh;
+}
+
+.time-slider .rc-slider-track {
+    display: none;
+}
+
+.time-slider .rc-slider-step {
+    display: none;
+}
+
+.time-slider .rc-slider-mark .rc-slider-mark-text-active {
+    color: var(--mainWhite);
+}
+
+.time-slider .rc-slider-mark .rc-slider-mark-text {
+    color: var(--mainWhite);
+}
+
+.time-slider-day .rc-slider-handle {
+    display: none;
+}

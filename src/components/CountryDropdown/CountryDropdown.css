@@ -1,0 +1,30 @@
+.country-dropdown {
+    margin-top: 1vh;
+}
+  
+.country-dropdown-menu {
+    height: 45vh;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+  
+.country-dropdown-current {
+    font-weight: 200;
+    cursor: pointer;
+    color: var(--mainWhite);
+}
+  
+.country-dropdown-arrow {
+    font-size: calc(10px + 1vmin);
+    position: relative;
+    top: -0.5vh;
+}
+  
+.country-dropdown-country {
+    background-color: #dadada;
+  }
+  
+.country-dropdown-city-multi {
+    padding-left: 2vw;
+    font-size: calc(10px + 1vh);
+  }
