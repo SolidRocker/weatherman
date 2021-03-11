@@ -1,6 +1,5 @@
-.weather-alert-fade-in, .weather-alert-fade-out, .weather-alert-stay, .weather-alert-end {
+.weather-alert-fade-in, .weather-alert-fade-out, .weather-alert-stay {
     width: 100vw;
-    padding: 0;
     font-size: calc(4px + 1vh);
     font-weight: 500;
 }
@@ -8,11 +7,11 @@
 .weather-alert-fade-in {
     animation: roll-in-animation 1.5s;
     opacity: 1;
-    height: 3vh;
+    height: 2.5vh;
 }
 
 .weather-alert-stay {
-    display: block;
+  display: block;
 }
   
 .weather-alert-fade-out {
@@ -27,7 +26,7 @@
       opacity: 0;
     }
     60% {
-      height: 3vh;
+      height: 2.5vh;
     }
     100% {
       opacity: 1;
@@ -36,7 +35,7 @@
   
 @keyframes roll-out-animation {
     0% {
-      height: 3vh;
+      height: 2.5vh;
       opacity: 1;
     }
     60% {

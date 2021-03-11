@@ -44,11 +44,11 @@ class Weather extends Component {
       navigator.geolocation.getCurrentPosition(function(position) {
         axios.get(Util.getReverseGeocodeAPI(position.coords.latitude, position.coords.longitude))
         .then(response => {
-          
+
           //console.log(response);
-          if(response.data.data.length > 1) {
+          if(response.items.length > 1) {
             self.setState({
-              country: response.data.data[0].locality
+              country: response.data.items[0].address.city
             });
           }
 
@@ -86,9 +86,9 @@ class Weather extends Component {
         onHide={this.closeModal}
         >
         <Modal.Header closeButton>
-          <Modal.Title>Error Loading Weather Data</Modal.Title>
+          <Modal.Title className='popup-title'>Error Loading Weather Data</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{this.state.errorMsg}</Modal.Body>
+        <Modal.Body className='popup-body'>{this.state.errorMsg}</Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={this.closeModal}>Close</Button>
         </Modal.Footer>
@@ -99,7 +99,7 @@ class Weather extends Component {
   getWeatherData() {
 
     let self = this;
-    axios.get(Util.getWeatherAPI(this.state.latitude, this.state.longitude))
+    axios.post(Util.getWeatherAPI(this.state.latitude, this.state.longitude))
     .then(response => {
       
       let weatherList = Util.createWeatherObj(response.data);
@@ -145,7 +145,10 @@ class Weather extends Component {
 
   getDisplayDate() {
     let res = Util.toCapitalize(this.state.currWeather.day) + ", ";
-    res += Util.getHourMark(this.state.currHour, true);
+    res += Util.getHourMark(this.state.currHour, true) + " ";
+
+    let offset = new Date().getTimezoneOffset();
+    res += "(UTC " + (offset > 0 ? '-' : '+') + (Math.abs(offset / 60)) + ")";
     return res;
   }
 
@@ -157,8 +160,8 @@ class Weather extends Component {
     axios.get(Util.getGeocodeAPI(city), {timeout: 5000})
     .then(response => {
       this.setState({
-        latitude: response.data.data[0].latitude,
-        longitude: response.data.data[0].longitude,
+        latitude: response.data.items[0].position.lat,
+        longitude: response.data.items[0].position.lng,
         country: city
       }, () => {
         this.getWeatherData();
@@ -166,8 +169,12 @@ class Weather extends Component {
     })
     .catch(err => {
 
-      console.log(err.message);
+      //console.log(err.message);
       let errMsg = "Cannot load data from city. Please try again."
+      if(!navigator.onLine) {
+        errMsg = "You are currently offline. Please check your internet connection."
+      }
+
       this.setState({
         isLoading: false,
         hasError: true,

@@ -9,8 +9,31 @@ class DayScoller extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currSelection: 0
+            currSelection: 0,
+            width: 0,
+            height: 0
         }
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+      }
+
+    updateDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    getIcon = (icon, desc) => {
+        let iconSrc = "https://openweathermap.org/img/wn/" + icon + "@4x.png";
+
+        if(this.state.width < this.state.height * 0.9) {
+            return <img className="scroll-icon-lg" src={iconSrc} alt={desc}></img>
+        }
+        return <img className="scroll-icon-sm" src={iconSrc} alt={desc}></img>
     }
 
     onSelect = key => {
@@ -30,13 +53,12 @@ class DayScoller extends Component {
             currIconClass = "scroll-arrow";
         }
 
-        let iconSrc = "http://openweathermap.org/img/wn/" + element.weather.icon + "@4x.png";
-
+        
         return (
         <div key={i} className={currContainerClass}>
             <div className={currIconClass}></div>
             <div className="scroll-date">{element.day.toUpperCase()}</div>
-            <img className="scroll-icon" src={iconSrc} alt={element.weather.description}></img>
+            {this.getIcon(element.weather.icon, element.weather.description)}
             <div className="scroll-temp-day">{element.temp.day}&deg;</div>
             <div className="scroll-temp-night">{element.temp.night}&deg;</div>
         </div>

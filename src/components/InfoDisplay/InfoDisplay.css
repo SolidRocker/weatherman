@@ -1,7 +1,7 @@
 .info-body {
     height: 65vh;
     width: 50vw;
-    min-width: 340px;
+    min-width: 260px;
     max-width: 520px;
     order: 1;
     padding-bottom: 0vh;;
@@ -21,12 +21,12 @@
 .info-bg-icon {
     position: absolute;
     top: 0;
-    left: 20vw;
-    bottom: 20vh;
+    left: 20vmax;
+    bottom: 20vmin;
     right: 0;
     margin: auto;
-    height: 30vh;
-    max-height: 50vh;
+    height: 30vmax;
+    max-height: 50vmin;
     opacity: 0.5;  
     z-index: 1;
     animation: fade-in-animation-icon 2s;
@@ -37,27 +37,27 @@
   }
   
  .info-temp {
-    font-size: calc(110px + 10vmin);
+    font-size: calc(30px + 12vmin);
     font-weight: 200;
-
-    padding-left: 1vw;
+    padding-left: 1vmax;
+    padding-bottom: 5vh;
 }
   
 .info-space {
-    height: 5vh;
-    min-height: 40px;
+    height: 5vmin;
+    min-height: 4vh;
 }
   
 .info-desc-text {
-    font-size: calc(12px + 1vmin);
-    padding-left: 1vw;
+    font-size: calc(10px + 1vmin);
+    padding-left: 1vmax;
     display: flex;
     align-items: center;
 }
 
 .info-desc-icon {
-    font-size: calc(22px + 2vmin);
-    padding-right: 1vw;
+    font-size: calc(14px + 2vmin);
+    padding-right: 1vmax;
 }
 
 @keyframes fade-in-animation {

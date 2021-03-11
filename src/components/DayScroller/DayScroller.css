@@ -1,5 +1,5 @@
 .scroll-box, .scroll-box-active {
-    height: 25vh;
+    height: 22vh;
     width: 23vw;
     max-width: 300px;
     align-items: center;
@@ -17,17 +17,21 @@
     background-color: var(--subHover);
 }
 
+.menu-wrapper .menu-wrapper--inner .menu-item-wrapper{
+    vertical-align: top;
+}
+
 .menu-wrapper .menu-wrapper--inner .menu-item-wrapper:focus{
     outline: none;
-
 }
   
 .scroll-arrow, .scroll-arrow-hidden {
     width: 0; 
     height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-top: 20px solid var(--lightColor);
+    margin-top: -4px;
+    border-left: 4vmin solid transparent;
+    border-right: 4vmin  solid transparent;
+    border-top: 4vmin solid var(--lightColor);
 }
   
 .scroll-arrow-hidden {
@@ -36,13 +40,21 @@
   
 .scroll-date {
     text-align: center;
-    padding-top: 0vh;
+    padding-top: 1vmin;
     color: var(--mainWhite);
+    font-size: calc(4px + 1.5vmin);
 }
   
-.scroll-icon {
-    width: 60%;
-    height: 60%;
+.scroll-icon-sm {
+    width: 6vh;
+    height: 6vh;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.scroll-icon-lg {
+    width: 50%;
+    height: 50%;
     object-fit: contain;
     pointer-events: none;
 }
@@ -50,10 +62,13 @@
 .scroll-temp-day {
     text-align: center;
     color: var(--mainWhite);
+    font-size: calc(4px + 1.5vmin);
 }
-  
+
 .scroll-temp-night {
     text-align: center;
     color: var(--lightGrey);
-    padding-bottom: 2vh;
+    padding-bottom: 2vmin;
+    font-size: calc(4px + 1.5vmin);
 }
+

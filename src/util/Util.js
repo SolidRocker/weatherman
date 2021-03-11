@@ -1,5 +1,5 @@
-const openWeatherMapAPIKey = '8a3b877f6488d0d35ad8827d3461a848';
-const positionStackAPIKey = 'a80e3d84441af6900f068affd975bd7b';
+const openWeatherMapAPIKey = "8a3b877f6488d0d35ad8827d3461a848";
+const hereAPIKey = "W3AGjRf_7jyTo8f3ileHIJC6oBfGWyoFpPqPMU1UC3k";
 
 export const Util = {
 
@@ -56,19 +56,19 @@ export const Util = {
     },
 
     getGeocodeAPI(city) {
-      return "http://api.positionstack.com/v1/forward?access_key="
-                + positionStackAPIKey
-                + "&query="
-                + city;
+      return "https://geocode.search.hereapi.com/v1/geocode?q="
+                + city
+                + "&apiKey="
+                + hereAPIKey
     },
 
     getReverseGeocodeAPI(latitude, longitude) {
-      return "http://api.positionstack.com/v1/reverse?access_key="
-                + positionStackAPIKey
-                + "&query="
+      return "https://revgeocode.search.hereapi.com/v1/revgeocode?at="
                 + latitude
                 + ","
-                + longitude;
+                + longitude
+                + "&apiKey="
+                + hereAPIKey
     },
 
     createWeatherObj(data) {

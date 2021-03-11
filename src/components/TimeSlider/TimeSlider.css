@@ -10,6 +10,11 @@
     display: none;
 }
 
+.time-slider .rc-slider-mark {
+    top: 15px;
+    font-size: calc(7px + 1vmin);
+}
+
 .time-slider .rc-slider-mark .rc-slider-mark-text-active {
     color: var(--mainWhite);
 }

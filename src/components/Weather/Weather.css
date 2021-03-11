@@ -5,7 +5,7 @@
 
 .weather-header {
   background-color: var(--mainColor);
-  height: 10vh;
+  height: 14vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +25,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /*height: 65vh;*/
+  margin-top: -0.5vh;
+  line-height: 1;
 }
 
 .weather-time {
@@ -35,4 +38,14 @@
 
 .weather .horizontal-menu {
   justify-content: center;
+  background-color: var(--subBG);
+  margin-top: -0.5vh;
+}
+
+.popup-title {
+  font-size: calc(14px + 1.2vw);
+}
+
+.popup-body {
+  font-size: calc(10px + 1vw);
 }

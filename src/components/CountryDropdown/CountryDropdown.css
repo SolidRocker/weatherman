@@ -1,11 +1,23 @@
 .country-dropdown {
-    margin-top: 1vh;
+    margin-top: 1vmax;
 }
   
 .country-dropdown-menu {
     height: 45vh;
+    width: 50vw;
     max-height: 450px;
+    max-width: 300px;
     overflow-y: scroll;
+}
+
+.country-dropdown-menu .list-unstyled .country-dropdown-country {
+    font-size: calc(6px + 1.4vmin);
+}
+
+.country-dropdown-menu .form-control {
+    width: 80% !important;
+    font-size: calc(7px + 1.4vmin);
+    padding: 0px 0px 0px 2vmin;
 }
   
 .country-dropdown-current {
@@ -17,14 +29,19 @@
 .country-dropdown-arrow {
     font-size: calc(10px + 1vmin);
     position: relative;
-    top: -0.5vh;
+    top: -0.5vmin;
 }
   
 .country-dropdown-country {
     background-color: #dadada;
-  }
+    font-size: calc(5px + 1.4vmin);
+}
   
 .country-dropdown-city-multi {
     padding-left: 2vw;
-    font-size: calc(10px + 1vh);
-  }
+    font-size: calc(7px + 1.3vmin);
+}
+
+.dropdown-header {
+    font-size: calc(5px + 1.4vmin);
+}

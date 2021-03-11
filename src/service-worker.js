@@ -51,7 +51,7 @@ registerRoute(
   })
 );
 
-const cacheName = 'weatherman_v0.4.85';
+const cacheName = 'weatherman_v0.4.93';
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
