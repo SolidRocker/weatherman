@@ -1,70 +1,40 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can view this project here: https://solidrocker.github.io/weatherman/
 
-## Available Scripts
+# Introduction
+This is a PWA that displays your current location's daily and hourly weather forecasts, as well as forecasts from any cities you choose from the list.
 
-In the project directory, you can run:
+### Features
+ - Displays details of today's forecast when loaded, according to local time.
+ - Displays hourly data when you move the sliders.
+ - Displays forecasts of different cities when you choose from the dropdown list.
+ - Scrollable list to choose forecasts for the next 8 days, as well as previews of some data.
+ - Animations on first load: Main details fade in when application is loaded.
+ - Animations when changing country: A loading screen will fade in, and only fade out after data has been loaded.
+ - Responsive UI when screen size or screen orientation changes.
+ - Displays an alert label when you go offline.
+ - Displays error popups when data loading fails.
+ - Caches loaded data with service worker: If you go offline after looking through a few cities' forecasts, you can still view these cities' data. However, if you click on a new city, an error message will appear.
+ 
+### Other Notes
+ - For hourly forecasts, OpenWeather API only returns the next 48 hours, even though we have 8 days' worth of daily forecasts. So for Day 3 onwards, I am using Day 1's hourly data. Only the first 2 days' hourly forecasts are accurate. It returns the daily forecast of all 8 days, so daily forcasts are not affected.
+ - I added a dummy city (last city in Germany) to showcase an error message if weather data cannot be returned.
+ 
+### Next Steps
+ - Allow bookmarking/saving of a few cities for easy access (via DB and redux).
+ - Change GET requests to POST requests, and shift them to a backend service to bypass CORS issues and hide API keys.
+ - Allow toggling between Fahrenheit/Celsius.
+ - Display weather warnings and advisories.
+ - [Big update] Show live map for users to monitor weather in a region in real-time.
 
-### `npm start`
+### APIs, Libraries and Resources Used:
+ - [OpenWeather](http://openweathermap.org/) for gettting weather forecasts  
+ - [Here.com](mhttps://developer.here.com/documentation) for geolocation services
+ - React JS
+ - Bootstrap for React for UI components such as alerts and dropdown lists.
+ - Axios for HTTP Requests
+ - Animation icons from [Amcharts](https://www.amcharts.com/free-animated-svg-weather-icons/)
+ - Logo from [Icon-icons](Icon-icons.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
+ 
