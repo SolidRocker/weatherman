@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/weatherman/static/css/main.06197c69.chunk.css",
-    "main.js": "/weatherman/static/js/main.8f785846.chunk.js",
-    "main.js.map": "/weatherman/static/js/main.8f785846.chunk.js.map",
+    "main.css": "/weatherman/static/css/main.6898ef33.chunk.css",
+    "main.js": "/weatherman/static/js/main.2cf192d8.chunk.js",
+    "main.js.map": "/weatherman/static/js/main.2cf192d8.chunk.js.map",
     "runtime-main.js": "/weatherman/static/js/runtime-main.41affa1f.js",
     "runtime-main.js.map": "/weatherman/static/js/runtime-main.41affa1f.js.map",
     "static/css/2.a4f2937f.chunk.css": "/weatherman/static/css/2.a4f2937f.chunk.css",
@@ -14,7 +14,7 @@
     "service-worker.js": "/weatherman/service-worker.js",
     "service-worker.js.map": "/weatherman/service-worker.js.map",
     "static/css/2.a4f2937f.chunk.css.map": "/weatherman/static/css/2.a4f2937f.chunk.css.map",
-    "static/css/main.06197c69.chunk.css.map": "/weatherman/static/css/main.06197c69.chunk.css.map",
+    "static/css/main.6898ef33.chunk.css.map": "/weatherman/static/css/main.6898ef33.chunk.css.map",
     "static/js/2.16556bcb.chunk.js.LICENSE.txt": "/weatherman/static/js/2.16556bcb.chunk.js.LICENSE.txt",
     "static/media/cloudy.24f9a474.svg": "/weatherman/static/media/cloudy.24f9a474.svg",
     "static/media/day.c33ef664.svg": "/weatherman/static/media/day.c33ef664.svg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.41affa1f.js",
     "static/css/2.a4f2937f.chunk.css",
     "static/js/2.16556bcb.chunk.js",
-    "static/css/main.06197c69.chunk.css",
-    "static/js/main.8f785846.chunk.js"
+    "static/css/main.6898ef33.chunk.css",
+    "static/js/main.2cf192d8.chunk.js"
   ]
 }
