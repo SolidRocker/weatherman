@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/weatherman/static/css/main.1b8bdd6f.chunk.css",
-    "main.js": "/weatherman/static/js/main.e0242fb3.chunk.js",
-    "main.js.map": "/weatherman/static/js/main.e0242fb3.chunk.js.map",
+    "main.js": "/weatherman/static/js/main.8f785846.chunk.js",
+    "main.js.map": "/weatherman/static/js/main.8f785846.chunk.js.map",
     "runtime-main.js": "/weatherman/static/js/runtime-main.41affa1f.js",
     "runtime-main.js.map": "/weatherman/static/js/runtime-main.41affa1f.js.map",
     "static/css/2.a4f2937f.chunk.css": "/weatherman/static/css/2.a4f2937f.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.a4f2937f.chunk.css",
     "static/js/2.16556bcb.chunk.js",
     "static/css/main.1b8bdd6f.chunk.css",
-    "static/js/main.e0242fb3.chunk.js"
+    "static/js/main.8f785846.chunk.js"
   ]
 }
